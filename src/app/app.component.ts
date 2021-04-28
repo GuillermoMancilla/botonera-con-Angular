@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'holaMundo';
+  title = 'botonera';
+
+  aplicarSonido(numero: number):void{
+    const audio = new Audio();
+    audio.src = '../assets/sounds/sonido' + numero + '.mp3';
+    audio.load();
+    audio.play();
+  }
 }
